@@ -1,9 +1,24 @@
 /*----- constants -----*/
 const color = {
     '0': 'white',
-    '1': 'purple',
-    '-1': 'lime'
-} 
+    '1': 'blue',
+    '-1': 'black'
+}
+const chickenDinner = [
+    [0,1,2],
+    [0,3,6],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [3,4,5],
+    [6,7,8],
+    [0,4,8],
+    [2,4,6]
+
+]
+const x = 'x';
+const o = 'o';
 /*----- app's state (variables) -----*/
 let board, winner, turn;
 /*----- cached element references -----*/
@@ -20,11 +35,13 @@ function init() {
 }
 
 function render() {
-    board.forEach(function(box, rowIdx){
-        document.getElementById(rowIdx).style.backgroundColor = color[0];
+    board.forEach(function(box, index){
+        document.getElementById(box).style.backgroundColor = color[box];
     })
 }
-
+render();
 function dropBox(e){
-    
+
+    turn *= -1;
+    render();
 }
