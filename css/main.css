@@ -4,11 +4,10 @@
 
 body {
     height: 100vh;
-    margin: 0;
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
     justify-content: center;
-    align-items: center;
+     align-items: center; 
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -16,18 +15,17 @@ header {
     font-size: 5vmin;
     letter-spacing: 1vmin;
     color: rgba(83,157,189);
-    margin: 10vmin;
+    
 }
 
 #boardSpace {
     display: grid;
     grid-template-columns: repeat(3, 6vmin);
     grid-template-rows: repeat(3,6vmin);
-    
+    margin: 3vmin;
   }
   
   #boardSpace > div {
-    display: flex;
     border: .1vmin solid rgba(83,157,189);;
     border-top-style: none;
     border-left-style: none;
@@ -40,5 +38,8 @@ header {
       border-top-color: red;
   }
   
-  
 
+button {
+    margin: 0;
+    
+}
